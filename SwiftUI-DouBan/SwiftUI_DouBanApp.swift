@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_DouBanApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
