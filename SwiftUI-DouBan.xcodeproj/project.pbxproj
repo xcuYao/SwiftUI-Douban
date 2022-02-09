@@ -14,6 +14,8 @@
 		BD0FE8502770A711008A0459 /* SwiftUI_DouBanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0FE84F2770A711008A0459 /* SwiftUI_DouBanApp.swift */; };
 		BD0FE8542770A712008A0459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0FE8532770A712008A0459 /* Assets.xcassets */; };
 		BD0FE8572770A712008A0459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0FE8562770A712008A0459 /* Preview Assets.xcassets */; };
+		BD46337C27B39B4A00FDD917 /* HomeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46337B27B39B4A00FDD917 /* HomeTest.swift */; };
+		BD46337E27B3A7D700FDD917 /* DouBan.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46337D27B3A7D700FDD917 /* DouBan.swift */; };
 		BD50B01E277AA5EF00D37E68 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50B01D277AA5EF00D37E68 /* HomeHeader.swift */; };
 		BD50B020277AA60000D37E68 /* HomeBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50B01F277AA60000D37E68 /* HomeBody.swift */; };
 		BDC1C86A2779683400783559 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1C8692779683400783559 /* RootView.swift */; };
@@ -34,6 +36,8 @@
 		BD0FE84F2770A711008A0459 /* SwiftUI_DouBanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_DouBanApp.swift; sourceTree = "<group>"; };
 		BD0FE8532770A712008A0459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD0FE8562770A712008A0459 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BD46337B27B39B4A00FDD917 /* HomeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTest.swift; sourceTree = "<group>"; };
+		BD46337D27B3A7D700FDD917 /* DouBan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBan.swift; sourceTree = "<group>"; };
 		BD50B01D277AA5EF00D37E68 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		BD50B01F277AA60000D37E68 /* HomeBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBody.swift; sourceTree = "<group>"; };
 		BDC1C8692779683400783559 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			children = (
 				BD0C94762779C0A700AD170D /* TabItem.swift */,
 				BD0C947C2779D7A500AD170D /* IconFont.swift */,
+				BD46337D27B3A7D700FDD917 /* DouBan.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 				BDC1C870277968FA00783559 /* HomeView.swift */,
 				BD50B01D277AA5EF00D37E68 /* HomeHeader.swift */,
 				BD50B01F277AA60000D37E68 /* HomeBody.swift */,
+				BD46337B27B39B4A00FDD917 /* HomeTest.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -254,10 +260,12 @@
 				BDC1C871277968FA00783559 /* HomeView.swift in Sources */,
 				BDC1C8782779693400783559 /* Module4.swift in Sources */,
 				BD0FE8502770A711008A0459 /* SwiftUI_DouBanApp.swift in Sources */,
+				BD46337E27B3A7D700FDD917 /* DouBan.swift in Sources */,
 				BDC1C86A2779683400783559 /* RootView.swift in Sources */,
 				BD50B020277AA60000D37E68 /* HomeBody.swift in Sources */,
 				BD0C94772779C0A700AD170D /* TabItem.swift in Sources */,
 				BD50B01E277AA5EF00D37E68 /* HomeHeader.swift in Sources */,
+				BD46337C27B39B4A00FDD917 /* HomeTest.swift in Sources */,
 				BD0C94802779E25500AD170D /* Color++.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

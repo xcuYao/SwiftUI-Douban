@@ -8,15 +8,66 @@
 import SwiftUI
 
 struct HomeHeader: View {
+
+    @Binding var menuToggle: Bool
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .frame(width: 100, height: 60, alignment: .center)
-            .background(Color.green)
+        VStack {
+            HStack {
+                Image("douban_icon")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                Text("豆瓣")
+                    .font(.system(size: 14))
+                    .foregroundColor(.black)
+            }.frame(height: 22)
+            Spacer()
+            HStack {
+                Button(action: {
+                    withAnimation {
+                        menuToggle.toggle()
+                    }
+                }, label: {
+                        Image("menu_icon")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                    })
+                HomeSearchView()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                Button(action: {
+                    print("show mail")
+                }, label: {
+                        Image("mail_icon")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                    })
+            }.frame(height: 40)
+                .padding([.leading, .trailing], 10)
+        }
+    }
+}
+
+struct HomeSearchView: View {
+    var body: some View {
+        HStack {
+            Spacer()
+            Image("search_icon")
+            Text("疫情前的最后一次旅行")
+                .font(.system(size: 14))
+                .foregroundColor(Color(hex: "#939E95"))
+            Spacer()
+        }.padding(6).background(Color(hex: "#EBF2ED"))
+            .cornerRadius(12)
     }
 }
 
 struct HomeHeader_Previews: PreviewProvider {
+
+    @State var menuToggle: Bool = false
+
     static var previews: some View {
-        HomeHeader()
+        HomeHeader(menuToggle: .constant(false))
+            .frame(width: UIScreen.main.bounds.width, height: DouBan.statusBarHeight)
+            .previewLayout(.sizeThatFits)
     }
 }

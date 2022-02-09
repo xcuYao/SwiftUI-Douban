@@ -26,6 +26,8 @@ struct RootView: View {
                 HomeView()
                     .tabItem {TabItem(type: .home, selection: selectedTab)}
                     .tag(TabItemType.home.rawValue)
+                    .navigationBarHidden(true)
+                    .ignoresSafeArea(edges: [.top])
                 Module2()
                     .tabItem {TabItem(type: .art, selection: selectedTab)}
                     .tag(TabItemType.art.rawValue)
@@ -38,9 +40,8 @@ struct RootView: View {
                 Module5()
                     .tabItem {TabItem(type: .me, selection: selectedTab)}
                     .tag(TabItemType.me.rawValue)
-            }.accentColor(Color(hex: "#2DBA31"))
+            }.accentColor(DouBan.mainColor)
         }
-//        .navigationBarTitle(itemType.titleText.v)
     }
 
     func clickHandler() {
