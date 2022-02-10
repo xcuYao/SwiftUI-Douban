@@ -27,4 +27,14 @@ extension DouBan {
             return Color(hex: "#2DBA31")
         }
     }
+    static var screenWidth: Double {
+        get {
+            return Double(UIScreen.main.bounds.size.width)
+        }
+    }
+    static var screenHeight: Double {
+        get {
+            return Double(UIScreen.main.bounds.size.height)
+        }
+    }
 }
