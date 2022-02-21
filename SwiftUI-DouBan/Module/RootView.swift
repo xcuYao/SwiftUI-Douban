@@ -64,7 +64,7 @@ struct MenuView: View {
         ZStack(alignment: .leading) {
             HStack{}
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color(hex: "#000000"))
+                .background(Color(hex: "#F7F7F7"))
                 .opacity(0.4)
                 .onTapGesture {
                     withAnimation {
@@ -91,56 +91,37 @@ struct MenuTopView: View {
             }.frame(height: DouBan.statusBarHeight)
                 .background(Color.red)
             HStack() {
-                Image("search_icon")
+                Image("menu_close")
+                    .resizable()
+                    .frame(width: 22, height: 22)
                 Spacer()
-                Image("search_icon")
+                Image("menu_scan")
+                    .resizable()
+                    .frame(width: 22, height: 22)
             }.padding([.leading, .trailing], 20)
             HStack() {
-                Image("search_icon")
+                Image("avatar")
                     .resizable()
                     .frame(width: 40, height: 40)
-                    .background(Color.red)
                     .cornerRadius(20)
                 VStack(alignment: .leading) {
                     Text("Neo")
                         .font(.system(size: 18))
+                        .foregroundColor(Color(hex: "#1A1919"))
                     Text("资料与账号")
                         .font(.system(size: 14))
-                        .foregroundColor(Color.gray)
+                        .foregroundColor(Color(hex: "#757473"))
                 }
                 Spacer()
             }.padding([.leading], 20)
-            VStack(alignment: .leading, spacing: 10) {
-                HStack(spacing: 14) {
-                    Image("search_icon")
-                    Text("我的收藏/豆列")
-                    Spacer()
-                }
-                HStack(spacing: 14) {
-                    Image("search_icon")
-                    Text("我的关注")
-                    Spacer()
-                }
-                HStack(spacing: 14) {
-                    Image("search_icon")
-                    Text("浏览历史")
-                    Spacer()
-                }
-                HStack(spacing: 14) {
-                    Image("search_icon")
-                    Text("青少年模式")
-                    Spacer()
-                }
-                HStack(spacing: 14) {
-                    Image("search_icon")
-                    Text("设置")
-                    Spacer()
-                }
-                HStack(spacing: 14) {
-                    Image("search_icon")
-                    Text("帮助与反馈")
-                    Spacer()
-                }
+            VStack(alignment: .leading, spacing: 16) {
+                MenuIcon(imageName: "menu_bookmark", text: "我的收藏/豆列")
+                MenuIcon(imageName: "menu_follow", text: "我的关注")
+                MenuIcon(imageName: "menu_history", text: "浏览历史")
+                VStack {Divider().background(Color(hex: "#D9D9D9"))}.padding([.trailing], 20)
+                MenuIcon(imageName: "menu_umbrella", text: "青少年模式")
+                MenuIcon(imageName: "menu_setting", text: "设置")
+                MenuIcon(imageName: "menu_help", text: "帮助与反馈")
             }.padding([.leading, .top], 20)
         }
     }
@@ -184,8 +165,22 @@ struct MenuBottomView: View {
 //    }
 //}
 
+struct MenuIcon: View {
+    var imageName: String
+    var text: String
+    var body: some View {
+        HStack(spacing: 14) {
+            Image(imageName)
+                .resizable()
+                .frame(width: 22, height: 22)
+            Text(text).font(.system(size: 14)).foregroundColor(Color(hex: "#1A1919"))
+            Spacer()
+        }
+    }
+}
+
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuBottomView()
+        MenuTopView()
     }
 }
