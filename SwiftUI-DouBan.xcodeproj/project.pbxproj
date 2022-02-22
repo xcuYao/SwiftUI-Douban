@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD044F6627C48B7500D4377C /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD044F6527C48B7500D4377C /* MenuView.swift */; };
+		BD044FA227C4911B00D4377C /* View++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD044FA127C4911B00D4377C /* View++.swift */; };
 		BD0C94772779C0A700AD170D /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C94762779C0A700AD170D /* TabItem.swift */; };
 		BD0C947A2779D6BD00AD170D /* colorSky.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD0C94792779D6BD00AD170D /* colorSky.ttf */; };
 		BD0C947D2779D7A500AD170D /* IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C947C2779D7A500AD170D /* IconFont.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD044F6527C48B7500D4377C /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		BD044FA127C4911B00D4377C /* View++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View++.swift"; sourceTree = "<group>"; };
 		BD0C94762779C0A700AD170D /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		BD0C94792779D6BD00AD170D /* colorSky.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = colorSky.ttf; sourceTree = "<group>"; };
 		BD0C947B2779D72200AD170D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0C947F2779E25500AD170D /* Color++.swift */,
+				BD044FA127C4911B00D4377C /* View++.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 				BD50B01D277AA5EF00D37E68 /* HomeHeader.swift */,
 				BD50B01F277AA60000D37E68 /* HomeBody.swift */,
 				BD46337B27B39B4A00FDD917 /* HomeTest.swift */,
+				BD044F6527C48B7500D4377C /* MenuView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -261,8 +267,10 @@
 				BDC1C8782779693400783559 /* Module4.swift in Sources */,
 				BD0FE8502770A711008A0459 /* SwiftUI_DouBanApp.swift in Sources */,
 				BD46337E27B3A7D700FDD917 /* DouBan.swift in Sources */,
+				BD044FA227C4911B00D4377C /* View++.swift in Sources */,
 				BDC1C86A2779683400783559 /* RootView.swift in Sources */,
 				BD50B020277AA60000D37E68 /* HomeBody.swift in Sources */,
+				BD044F6627C48B7500D4377C /* MenuView.swift in Sources */,
 				BD0C94772779C0A700AD170D /* TabItem.swift in Sources */,
 				BD50B01E277AA5EF00D37E68 /* HomeHeader.swift in Sources */,
 				BD46337C27B39B4A00FDD917 /* HomeTest.swift in Sources */,

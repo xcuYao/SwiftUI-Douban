@@ -45,6 +45,17 @@ struct HomeHeader: View {
                 .padding([.leading, .trailing], 10)
         }
     }
+
+    func hideAfter() {
+        print("hide After")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            print("hide After 2")
+            withAnimation {
+                menuToggle.toggle()
+            }
+        }
+    }
+
 }
 
 struct HomeSearchView: View {
