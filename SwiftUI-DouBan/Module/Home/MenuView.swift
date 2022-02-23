@@ -12,10 +12,10 @@ struct MenuView: View {
     @Binding var menuToggle: Bool
 
     var body: some View {
-        ZStack(alignment: .leading) {
+        ZStack(alignment: .topLeading) {
             if menuToggle {
-                HStack { }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                HStack {  }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(hex: "#F7F7F7"))
                     .opacity(0.4)
                     .onTapGesture {
@@ -32,8 +32,7 @@ struct MenuView: View {
                 .background(Color(hex: "#F7F7F7"))
                 .cornerRadius(20, corners: [.topRight, .bottomRight])
         }
-            .frame(width: DouBan.screenWidth, height: DouBan.screenHeight)
-            .transition(AnyTransition.opacity.combined(with: .slide))
+        .transition(AnyTransition.opacity.combined(with: .slide))
     }
 }
 
@@ -101,7 +100,6 @@ struct MenuBottomView: View {
                     MenuIcon2(imageName: "menu_twitter", text: "豆瓣阅读书架")
                     MenuIcon2(imageName: "menu_radio", text: "豆瓣FM")
                 }.padding([.top, .bottom], 14)
-//                    .background(Color.red)
             }.padding([.leading, .trailing], 6)
                 .background(Color.white)
                 .cornerRadius(8)
