@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct HomeBody: View {
+
+    @State private var showToast: Bool = false
+    private let toastOptions = SimpleToastOptions(
+        hideAfter: 5
+    )
+
     var body: some View {
         ZStack(alignment: .bottom, content: {
             Image("avatar")
@@ -16,10 +22,23 @@ struct HomeBody: View {
                 .padding(10)
                 .background(Color.red)
                 .cornerRadius(10)
-//                .alignmentGuide(.center) { d in
-//                    d[.center]
-//                }
-        })
+            Button(action: {
+                showToast.toggle()
+            }, label: {
+                    Text("Show Toast")
+                })
+        }).simpleToast(isPresented: $showToast, options: toastOptions, onDismiss: {
+            print("toast dismiss")
+        }, content: {
+                HStack {
+                    Image(systemName: "exclamationmark.triangle")
+                    Text("This is some simple toast message.")
+                }
+                    .padding()
+                    .background(Color.red.opacity(0.8))
+                    .foregroundColor(Color.white)
+                    .cornerRadius(10)
+            })
     }
 }
 

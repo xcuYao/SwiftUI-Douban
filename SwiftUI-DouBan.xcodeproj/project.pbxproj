@@ -26,6 +26,13 @@
 		BDC1C8762779692500783559 /* Module3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1C8752779692500783559 /* Module3.swift */; };
 		BDC1C8782779693400783559 /* Module4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1C8772779693400783559 /* Module4.swift */; };
 		BDC1C87A2779694500783559 /* Module5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1C8792779694500783559 /* Module5.swift */; };
+		BDC6FCAF27C71CEA00BBD5FA /* SimpleToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6FCA727C71CEA00BBD5FA /* SimpleToast.swift */; };
+		BDC6FCB027C71CEA00BBD5FA /* SimpleToastSkew.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6FCA927C71CEA00BBD5FA /* SimpleToastSkew.swift */; };
+		BDC6FCB127C71CEA00BBD5FA /* SimpleToastSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6FCAA27C71CEA00BBD5FA /* SimpleToastSlide.swift */; };
+		BDC6FCB227C71CEA00BBD5FA /* SimpleToastFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6FCAB27C71CEA00BBD5FA /* SimpleToastFade.swift */; };
+		BDC6FCB327C71CEA00BBD5FA /* SimpleToastScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6FCAC27C71CEA00BBD5FA /* SimpleToastScale.swift */; };
+		BDC6FCB427C71CEA00BBD5FA /* SimpleToastOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6FCAD27C71CEA00BBD5FA /* SimpleToastOptions.swift */; };
+		BDC6FCB527C71CEA00BBD5FA /* SimpleToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC6FCAE27C71CEA00BBD5FA /* SimpleToastModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +57,13 @@
 		BDC1C8752779692500783559 /* Module3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module3.swift; sourceTree = "<group>"; };
 		BDC1C8772779693400783559 /* Module4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module4.swift; sourceTree = "<group>"; };
 		BDC1C8792779694500783559 /* Module5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module5.swift; sourceTree = "<group>"; };
+		BDC6FCA727C71CEA00BBD5FA /* SimpleToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleToast.swift; sourceTree = "<group>"; };
+		BDC6FCA927C71CEA00BBD5FA /* SimpleToastSkew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleToastSkew.swift; sourceTree = "<group>"; };
+		BDC6FCAA27C71CEA00BBD5FA /* SimpleToastSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleToastSlide.swift; sourceTree = "<group>"; };
+		BDC6FCAB27C71CEA00BBD5FA /* SimpleToastFade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleToastFade.swift; sourceTree = "<group>"; };
+		BDC6FCAC27C71CEA00BBD5FA /* SimpleToastScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleToastScale.swift; sourceTree = "<group>"; };
+		BDC6FCAD27C71CEA00BBD5FA /* SimpleToastOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleToastOptions.swift; sourceTree = "<group>"; };
+		BDC6FCAE27C71CEA00BBD5FA /* SimpleToastModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleToastModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +80,7 @@
 		BD0C94752779C08300AD170D /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				BDC6FCA527C71CCD00BBD5FA /* Lib */,
 				BD0C94762779C0A700AD170D /* TabItem.swift */,
 				BD0C947C2779D7A500AD170D /* IconFont.swift */,
 				BD46337D27B3A7D700FDD917 /* DouBan.swift */,
@@ -186,6 +201,36 @@
 			path = Module5;
 			sourceTree = "<group>";
 		};
+		BDC6FCA527C71CCD00BBD5FA /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				BDC6FCA627C71CEA00BBD5FA /* SimpleToast */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		BDC6FCA627C71CEA00BBD5FA /* SimpleToast */ = {
+			isa = PBXGroup;
+			children = (
+				BDC6FCA727C71CEA00BBD5FA /* SimpleToast.swift */,
+				BDC6FCA827C71CEA00BBD5FA /* Modifier */,
+				BDC6FCAD27C71CEA00BBD5FA /* SimpleToastOptions.swift */,
+				BDC6FCAE27C71CEA00BBD5FA /* SimpleToastModifier.swift */,
+			);
+			path = SimpleToast;
+			sourceTree = "<group>";
+		};
+		BDC6FCA827C71CEA00BBD5FA /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				BDC6FCA927C71CEA00BBD5FA /* SimpleToastSkew.swift */,
+				BDC6FCAA27C71CEA00BBD5FA /* SimpleToastSlide.swift */,
+				BDC6FCAB27C71CEA00BBD5FA /* SimpleToastFade.swift */,
+				BDC6FCAC27C71CEA00BBD5FA /* SimpleToastScale.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,20 +306,27 @@
 			files = (
 				BDC1C8762779692500783559 /* Module3.swift in Sources */,
 				BD0C947D2779D7A500AD170D /* IconFont.swift in Sources */,
+				BDC6FCB127C71CEA00BBD5FA /* SimpleToastSlide.swift in Sources */,
 				BDC1C8742779691100783559 /* Module2.swift in Sources */,
+				BDC6FCB027C71CEA00BBD5FA /* SimpleToastSkew.swift in Sources */,
 				BDC1C87A2779694500783559 /* Module5.swift in Sources */,
 				BDC1C871277968FA00783559 /* HomeView.swift in Sources */,
 				BDC1C8782779693400783559 /* Module4.swift in Sources */,
 				BD0FE8502770A711008A0459 /* SwiftUI_DouBanApp.swift in Sources */,
+				BDC6FCB227C71CEA00BBD5FA /* SimpleToastFade.swift in Sources */,
 				BD46337E27B3A7D700FDD917 /* DouBan.swift in Sources */,
 				BD044FA227C4911B00D4377C /* View++.swift in Sources */,
 				BDC1C86A2779683400783559 /* RootView.swift in Sources */,
 				BD50B020277AA60000D37E68 /* HomeBody.swift in Sources */,
+				BDC6FCB427C71CEA00BBD5FA /* SimpleToastOptions.swift in Sources */,
 				BD044F6627C48B7500D4377C /* MenuView.swift in Sources */,
 				BD0C94772779C0A700AD170D /* TabItem.swift in Sources */,
+				BDC6FCB327C71CEA00BBD5FA /* SimpleToastScale.swift in Sources */,
 				BD50B01E277AA5EF00D37E68 /* HomeHeader.swift in Sources */,
 				BD46337C27B39B4A00FDD917 /* HomeTest.swift in Sources */,
+				BDC6FCAF27C71CEA00BBD5FA /* SimpleToast.swift in Sources */,
 				BD0C94802779E25500AD170D /* Color++.swift in Sources */,
+				BDC6FCB527C71CEA00BBD5FA /* SimpleToastModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
