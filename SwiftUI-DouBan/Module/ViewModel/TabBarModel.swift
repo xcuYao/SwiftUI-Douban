@@ -23,14 +23,8 @@ class TabBarModel: ObservableObject {
 
     func selectHandler(item: TabBarItemModel) {
         self.items.forEach { i in
-            if i.index == item.index {
-                i.select = true
-            } else {
-                i.select = false
-            }
+            i.select = i.index == item.index
         }
-        print(self.items)
-        print("=========")
     }
 
 }

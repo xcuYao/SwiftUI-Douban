@@ -10,7 +10,6 @@ import SwiftUI
 struct RootView: View {
 
     @State private var selectedTab = 0
-    private var itemType: TabItemType { TabItemType(rawValue: selectedTab)! }
     @State private var menuToggle: Bool = false
 
     var handler: Binding<Int> { Binding(
@@ -22,30 +21,20 @@ struct RootView: View {
     }
 
     var body: some View {
-        NavigationView {
-            ZStack() {
-                TabView(selection: handler) {
-                    HomeView(menuToggle: $menuToggle)
-                    .tag(TabItemType.home.rawValue)
-                        .navigationBarHidden(true)
-//                        .ignoresSafeArea(edges: .all)
-                    Module2()
-                    .tag(TabItemType.art.rawValue)
-                    Module3()
-                    .tag(TabItemType.group.rawValue)
-                    Module4()
-                    .tag(TabItemType.market.rawValue)
-                    Module5()
-                    .tag(TabItemType.me.rawValue)
-                }.overlay(
-                    CustomTabBarView(selectedTab: $selectedTab)
-                    , alignment: .bottom)
-                    .accentColor(DouBan.mainColor)
-//                MenuView(menuToggle: $menuToggle)
-//                    .frame(width: DouBan.screenWidth, height: DouBan.screenHeight)
-//                    .offset(x: menuToggle ? 0 : -DouBan.screenWidth, y: 0)
-//                    .ignoresSafeArea(edges: .all)
-            }
+        ZStack() {
+            TabView(selection: handler) {
+                HomeView(menuToggle: $menuToggle).tag(0)
+                Module2().tag(1)
+                Module3().tag(2)
+                Module4().tag(3)
+                Module5().tag(4)
+            }.overlay(
+                CustomTabBarView(selectedTab: $selectedTab)
+                , alignment: .bottom)
+                .accentColor(DouBan.mainColor)
+            MenuView(menuToggle: $menuToggle)
+                .offset(x: menuToggle ? 0 : -DouBan.screenWidth, y: 0)
+                .edgesIgnoringSafeArea(.vertical)
         }
     }
 
@@ -67,7 +56,7 @@ struct RootView_Previews: PreviewProvider {
 struct CustomTabBarView: View {
 
     @Binding var selectedTab: Int
-    @ObservedObject private var tabBarModel: TabBarModel = TabBarModel()
+    @StateObject private var tabBarModel: TabBarModel = TabBarModel()
 
     var body: some View {
         VStack {

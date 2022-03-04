@@ -16,7 +16,7 @@ struct MenuView: View {
             if menuToggle {
                 HStack {  }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color(hex: "#F7F7F7"))
+                    .background(Color(hex: "#141414"))
                     .opacity(0.4)
                     .onTapGesture {
                         withAnimation {

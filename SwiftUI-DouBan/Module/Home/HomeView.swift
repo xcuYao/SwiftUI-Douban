@@ -12,15 +12,13 @@ struct HomeView: View {
     @Binding var menuToggle: Bool
 
     var body: some View {
-        ZStack {
-            VStack {
-                HomeHeader(menuToggle: $menuToggle)
-                    .frame(height: DouBan.statusBarHeight + 40)
-                    .clipped()
-                HomeBody()
-                Spacer()
-            }
-        }
+        VStack {
+            HomeHeader(menuToggle: $menuToggle)
+                .frame(height: 40)
+                .clipped()
+            HomeBody()
+            Spacer()
+        }.statusBar(hidden: menuToggle)
     }
 }
 

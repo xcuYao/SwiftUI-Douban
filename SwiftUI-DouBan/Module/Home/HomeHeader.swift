@@ -12,50 +12,39 @@ struct HomeHeader: View {
     @Binding var menuToggle: Bool
 
     var body: some View {
-        VStack {
-            HStack {
-                Image("douban_icon")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                Text("豆瓣")
-                    .font(.system(size: 14))
-                    .foregroundColor(.black)
-            }.frame(height: 22)
-            Spacer()
-            HStack {
-                Button(action: {
-                    withAnimation {
-                        menuToggle.toggle()
-                    }
-                }, label: {
-                        Image("menu_icon")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                    })
-                HomeSearchView()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                Button(action: {
-                    print("show mail")
-                }, label: {
-                        Image("mail_icon")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                    })
-            }.frame(height: 40)
-                .padding([.leading, .trailing], 10)
-        }
+//        VStack {
+//            HStack {
+//                Image("douban_icon")
+//                    .resizable()
+//                    .frame(width: 20, height: 20)
+//                Text("豆瓣")
+//                    .font(.system(size: 14))
+//                    .foregroundColor(.black)
+//            }.frame(height: 22)
+//            Spacer()
+            
+//        }
+        HStack {
+            Button(action: {
+                withAnimation {
+                    menuToggle.toggle()
+                }
+            }, label: {
+                    Image("menu_icon")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                })
+            HomeSearchView()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            Button(action: {
+                print("show mail")
+            }, label: {
+                    Image("mail_icon")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                })
+        }.frame(alignment: .bottom).padding([.leading, .trailing], 10)
     }
-
-    func hideAfter() {
-        print("hide After")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            print("hide After 2")
-            withAnimation {
-                menuToggle.toggle()
-            }
-        }
-    }
-
 }
 
 struct HomeSearchView: View {
