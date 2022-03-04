@@ -12,7 +12,6 @@ struct RootView: View {
     @State private var selectedTab = 0
     private var itemType: TabItemType { TabItemType(rawValue: selectedTab)! }
     @State private var menuToggle: Bool = false
-    @State private var menuMoveX: Double = 0.0
 
     var handler: Binding<Int> { Binding(
         get: { self.selectedTab },
@@ -27,44 +26,26 @@ struct RootView: View {
             ZStack() {
                 TabView(selection: handler) {
                     HomeView(menuToggle: $menuToggle)
-                        .tabItem { TabItem(type: .home, selection: selectedTab) }
-                        .tag(TabItemType.home.rawValue)
+                    .tag(TabItemType.home.rawValue)
                         .navigationBarHidden(true)
-                        .ignoresSafeArea(edges: .all)
+//                        .ignoresSafeArea(edges: .all)
                     Module2()
-                        .tabItem { TabItem(type: .art, selection: selectedTab) }
-                        .tag(TabItemType.art.rawValue)
+                    .tag(TabItemType.art.rawValue)
                     Module3()
-                        .tabItem { TabItem(type: .group, selection: selectedTab) }
-                        .tag(TabItemType.group.rawValue)
+                    .tag(TabItemType.group.rawValue)
                     Module4()
-                        .tabItem { TabItem(type: .market, selection: selectedTab) }
-                        .tag(TabItemType.market.rawValue)
+                    .tag(TabItemType.market.rawValue)
                     Module5()
-                        .tabItem { TabItem(type: .me, selection: selectedTab) }
-                        .tag(TabItemType.me.rawValue)
-                }.accentColor(DouBan.mainColor)
-                MenuView(menuToggle: $menuToggle)
-                    .frame(width: DouBan.screenWidth, height: DouBan.screenHeight)
-                    .offset(x: menuToggle ? 0 : -DouBan.screenWidth, y: 0)
-//                    .offset(x: -DouBan.screenWidth + menuMoveX, y: 0)
-                    .ignoresSafeArea(edges: .all)
-            }.gesture(
-                DragGesture()
-                    .onChanged({ gesture in
-                        print("change:\(gesture.translation)")
-                        if gesture.translation.width < 120 {
-                            menuToggle.toggle()
-                        }
-                    })
-                    .onEnded({ ges in
-                        if ges.translation.width > 20 {
-                            withAnimation {
-                                menuToggle.toggle()
-                            }
-                        }
-                    })
-            )
+                    .tag(TabItemType.me.rawValue)
+                }.overlay(
+                    CustomTabBarView(selectedTab: $selectedTab)
+                    , alignment: .bottom)
+                    .accentColor(DouBan.mainColor)
+//                MenuView(menuToggle: $menuToggle)
+//                    .frame(width: DouBan.screenWidth, height: DouBan.screenHeight)
+//                    .offset(x: menuToggle ? 0 : -DouBan.screenWidth, y: 0)
+//                    .ignoresSafeArea(edges: .all)
+            }
         }
     }
 
@@ -75,6 +56,66 @@ struct RootView: View {
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView()
+//        RootView()
+        CustomTabBarView(selectedTab: .constant(0))
+            .accentColor(DouBan.mainColor)
+            .previewLayout(.fixed(width: 500, height: 80))
+
+    }
+}
+
+struct CustomTabBarView: View {
+
+    @Binding var selectedTab: Int
+    @ObservedObject private var tabBarModel: TabBarModel = TabBarModel()
+
+    var body: some View {
+        VStack {
+            Divider()
+            Color(hex: "#ffffff")
+                .edgesIgnoringSafeArea(.vertical)
+                .frame(height: 50)
+                .overlay(
+                HStack {
+                    ForEach(tabBarModel.items) { item in
+                        CustomTabBarItem(action: {
+                            withAnimation {
+                                selectedTab = item.index
+                                clickAction(item: item)
+                            }
+                        }, viewModel: item)
+                    }
+                }
+            )
+        }
+    }
+
+    func clickAction(item: TabBarItemModel) {
+        tabBarModel.selectHandler(item: item)
+    }
+}
+
+struct CustomTabBarItem: View {
+
+    var action: () -> Void
+
+    @ObservedObject var viewModel: TabBarItemModel
+
+    var body: some View {
+        Button(action: action, label: {
+            VStack {
+                Image(systemName: viewModel.select ? viewModel.selectImage : viewModel.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 25, height: 25, alignment: .center)
+                    .foregroundColor(viewModel.select ? DouBan.mainColor : Color(hex: "#6F6F6F"))
+                    .opacity(viewModel.select ? 1 : 0.4)
+                    .animation(.easeInOut, value: viewModel.select)
+                Text(viewModel.title)
+                    .font(.system(size: 12))
+                    .foregroundColor(viewModel.select ? DouBan.mainColor : Color(hex: "#6F6F6F"))
+                    .animation(.easeInOut, value: viewModel.select)
+            }
+        }).frame(maxWidth: .infinity)
     }
 }

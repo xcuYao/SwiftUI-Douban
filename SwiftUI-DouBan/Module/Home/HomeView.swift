@@ -18,7 +18,6 @@ struct HomeView: View {
                     .frame(height: DouBan.statusBarHeight + 40)
                     .clipped()
                 HomeBody()
-                Text(menuToggle ? "true" : "false")
                 Spacer()
             }
         }
