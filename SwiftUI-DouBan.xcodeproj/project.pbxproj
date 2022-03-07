@@ -20,6 +20,19 @@
 		BD46337E27B3A7D700FDD917 /* DouBan.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46337D27B3A7D700FDD917 /* DouBan.swift */; };
 		BD50B01E277AA5EF00D37E68 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50B01D277AA5EF00D37E68 /* HomeHeader.swift */; };
 		BD50B020277AA60000D37E68 /* HomeBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD50B01F277AA60000D37E68 /* HomeBody.swift */; };
+		BD62AB2B27D62397007566E2 /* NavBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB1D27D62396007566E2 /* NavBarModifier.swift */; };
+		BD62AB2C27D62397007566E2 /* FixedSizeNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB1F27D62396007566E2 /* FixedSizeNavBarView.swift */; };
+		BD62AB2D27D62397007566E2 /* SegmentedNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB2027D62396007566E2 /* SegmentedNavBarView.swift */; };
+		BD62AB2E27D62397007566E2 /* ScrollableNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB2127D62396007566E2 /* ScrollableNavBarView.swift */; };
+		BD62AB2F27D62397007566E2 /* IndicatorBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB2227D62396007566E2 /* IndicatorBarView.swift */; };
+		BD62AB3027D62397007566E2 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB2327D62397007566E2 /* DataStore.swift */; };
+		BD62AB3127D62397007566E2 /* PagerTabViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB2427D62397007566E2 /* PagerTabViewStyle.swift */; };
+		BD62AB3227D62397007566E2 /* PagerTabStripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB2527D62397007566E2 /* PagerTabStripView.swift */; };
+		BD62AB3327D62397007566E2 /* NavBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB2627D62397007566E2 /* NavBarItem.swift */; };
+		BD62AB3427D62397007566E2 /* PagerSetAppearModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB2727D62397007566E2 /* PagerSetAppearModifier.swift */; };
+		BD62AB3527D62397007566E2 /* PagerTabItemModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB2827D62397007566E2 /* PagerTabItemModifier.swift */; };
+		BD62AB3627D62397007566E2 /* PagerTabViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB2927D62397007566E2 /* PagerTabViewDelegate.swift */; };
+		BD62AB3727D62397007566E2 /* View+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD62AB2A27D62397007566E2 /* View+Modifiers.swift */; };
 		BD687E6A27D20D1500E029D9 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD687E6927D20D1500E029D9 /* TabBarModel.swift */; };
 		BDC1C86A2779683400783559 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1C8692779683400783559 /* RootView.swift */; };
 		BDC1C871277968FA00783559 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1C870277968FA00783559 /* HomeView.swift */; };
@@ -52,6 +65,19 @@
 		BD46337D27B3A7D700FDD917 /* DouBan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBan.swift; sourceTree = "<group>"; };
 		BD50B01D277AA5EF00D37E68 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		BD50B01F277AA60000D37E68 /* HomeBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBody.swift; sourceTree = "<group>"; };
+		BD62AB1D27D62396007566E2 /* NavBarModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarModifier.swift; sourceTree = "<group>"; };
+		BD62AB1F27D62396007566E2 /* FixedSizeNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedSizeNavBarView.swift; sourceTree = "<group>"; };
+		BD62AB2027D62396007566E2 /* SegmentedNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedNavBarView.swift; sourceTree = "<group>"; };
+		BD62AB2127D62396007566E2 /* ScrollableNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableNavBarView.swift; sourceTree = "<group>"; };
+		BD62AB2227D62396007566E2 /* IndicatorBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorBarView.swift; sourceTree = "<group>"; };
+		BD62AB2327D62397007566E2 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		BD62AB2427D62397007566E2 /* PagerTabViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabViewStyle.swift; sourceTree = "<group>"; };
+		BD62AB2527D62397007566E2 /* PagerTabStripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripView.swift; sourceTree = "<group>"; };
+		BD62AB2627D62397007566E2 /* NavBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarItem.swift; sourceTree = "<group>"; };
+		BD62AB2727D62397007566E2 /* PagerSetAppearModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerSetAppearModifier.swift; sourceTree = "<group>"; };
+		BD62AB2827D62397007566E2 /* PagerTabItemModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabItemModifier.swift; sourceTree = "<group>"; };
+		BD62AB2927D62397007566E2 /* PagerTabViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabViewDelegate.swift; sourceTree = "<group>"; };
+		BD62AB2A27D62397007566E2 /* View+Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Modifiers.swift"; sourceTree = "<group>"; };
 		BD687E6927D20D1500E029D9 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		BDC1C8692779683400783559 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		BDC1C870277968FA00783559 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -145,6 +171,34 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		BD62AB1C27D62383007566E2 /* PagerTabStripView */ = {
+			isa = PBXGroup;
+			children = (
+				BD62AB2327D62397007566E2 /* DataStore.swift */,
+				BD62AB2627D62397007566E2 /* NavBarItem.swift */,
+				BD62AB1D27D62396007566E2 /* NavBarModifier.swift */,
+				BD62AB1E27D62396007566E2 /* NavigationBarStyles */,
+				BD62AB2727D62397007566E2 /* PagerSetAppearModifier.swift */,
+				BD62AB2827D62397007566E2 /* PagerTabItemModifier.swift */,
+				BD62AB2527D62397007566E2 /* PagerTabStripView.swift */,
+				BD62AB2927D62397007566E2 /* PagerTabViewDelegate.swift */,
+				BD62AB2427D62397007566E2 /* PagerTabViewStyle.swift */,
+				BD62AB2A27D62397007566E2 /* View+Modifiers.swift */,
+			);
+			path = PagerTabStripView;
+			sourceTree = "<group>";
+		};
+		BD62AB1E27D62396007566E2 /* NavigationBarStyles */ = {
+			isa = PBXGroup;
+			children = (
+				BD62AB1F27D62396007566E2 /* FixedSizeNavBarView.swift */,
+				BD62AB2027D62396007566E2 /* SegmentedNavBarView.swift */,
+				BD62AB2127D62396007566E2 /* ScrollableNavBarView.swift */,
+				BD62AB2227D62396007566E2 /* IndicatorBarView.swift */,
+			);
+			path = NavigationBarStyles;
+			sourceTree = "<group>";
+		};
 		BD687E6827D20CDE00E029D9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +269,7 @@
 		BDC6FCA527C71CCD00BBD5FA /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				BD62AB1C27D62383007566E2 /* PagerTabStripView */,
 				BDC6FCA627C71CEA00BBD5FA /* SimpleToast */,
 			);
 			path = Lib;
@@ -320,24 +375,37 @@
 				BDC6FCB127C71CEA00BBD5FA /* SimpleToastSlide.swift in Sources */,
 				BDC1C8742779691100783559 /* Module2.swift in Sources */,
 				BDC6FCB027C71CEA00BBD5FA /* SimpleToastSkew.swift in Sources */,
+				BD62AB3227D62397007566E2 /* PagerTabStripView.swift in Sources */,
+				BD62AB3127D62397007566E2 /* PagerTabViewStyle.swift in Sources */,
+				BD62AB2E27D62397007566E2 /* ScrollableNavBarView.swift in Sources */,
 				BD2CF99727D266E20093C933 /* Store.swift in Sources */,
 				BDC1C87A2779694500783559 /* Module5.swift in Sources */,
 				BDC1C871277968FA00783559 /* HomeView.swift in Sources */,
+				BD62AB2D27D62397007566E2 /* SegmentedNavBarView.swift in Sources */,
 				BDC1C8782779693400783559 /* Module4.swift in Sources */,
 				BD0FE8502770A711008A0459 /* SwiftUI_DouBanApp.swift in Sources */,
+				BD62AB2B27D62397007566E2 /* NavBarModifier.swift in Sources */,
+				BD62AB3027D62397007566E2 /* DataStore.swift in Sources */,
+				BD62AB3427D62397007566E2 /* PagerSetAppearModifier.swift in Sources */,
 				BD687E6A27D20D1500E029D9 /* TabBarModel.swift in Sources */,
 				BDC6FCB227C71CEA00BBD5FA /* SimpleToastFade.swift in Sources */,
+				BD62AB3727D62397007566E2 /* View+Modifiers.swift in Sources */,
 				BD46337E27B3A7D700FDD917 /* DouBan.swift in Sources */,
 				BD044FA227C4911B00D4377C /* View++.swift in Sources */,
+				BD62AB3627D62397007566E2 /* PagerTabViewDelegate.swift in Sources */,
+				BD62AB3527D62397007566E2 /* PagerTabItemModifier.swift in Sources */,
 				BDC1C86A2779683400783559 /* RootView.swift in Sources */,
 				BD50B020277AA60000D37E68 /* HomeBody.swift in Sources */,
 				BDC6FCB427C71CEA00BBD5FA /* SimpleToastOptions.swift in Sources */,
 				BD044F6627C48B7500D4377C /* MenuView.swift in Sources */,
 				BDC6FCB327C71CEA00BBD5FA /* SimpleToastScale.swift in Sources */,
+				BD62AB2F27D62397007566E2 /* IndicatorBarView.swift in Sources */,
 				BD50B01E277AA5EF00D37E68 /* HomeHeader.swift in Sources */,
 				BD46337C27B39B4A00FDD917 /* HomeTest.swift in Sources */,
 				BDC6FCAF27C71CEA00BBD5FA /* SimpleToast.swift in Sources */,
 				BD0C94802779E25500AD170D /* Color++.swift in Sources */,
+				BD62AB3327D62397007566E2 /* NavBarItem.swift in Sources */,
+				BD62AB2C27D62397007566E2 /* FixedSizeNavBarView.swift in Sources */,
 				BDC6FCB527C71CEA00BBD5FA /* SimpleToastModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
