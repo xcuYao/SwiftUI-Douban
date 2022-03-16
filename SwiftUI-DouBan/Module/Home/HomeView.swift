@@ -11,7 +11,7 @@ struct HomeView: View {
 
     @Binding var menuToggle: Bool
     @State private var selection = 0
-    
+
     var body: some View {
         VStack {
             HomeHeader(menuToggle: $menuToggle)
@@ -25,34 +25,38 @@ struct HomeView: View {
                 HomeBody2().pagerTabItem {
                     DoubanNavBarItem(title: "关注")
                 }
-            })
+            }).frame(alignment: .center)
+                .pagerTabStripViewStyle(.scrollableBarButton(indicatorBarHeight: 4, indicatorBarColor: Color(hex: "#181818"), tabItemSpacing: 40, tabItemHeight: 40))
         }.statusBar(hidden: menuToggle)
     }
+}
+
+private class ButtonTheme: ObservableObject {
+    @Published var textColor = Color.gray
 }
 
 struct DoubanNavBarItem: View, PagerTabViewDelegate {
 
     let title: String
 
-    @State private var textColor = Color.red
+    @ObservedObject fileprivate var theme = ButtonTheme()
 
     var body: some View {
         VStack {
             Text(title)
-                .foregroundColor(textColor)
-                .font(.system(size: 14))
+                .foregroundColor(theme.textColor)
+                .font(.system(size: 16))
         }
-            .background(Color.clear)
     }
 
     func setState(state: PagerTabViewState) {
         switch state {
         case .selected:
-            self.textColor = Color.black
+            self.theme.textColor = Color(hex: "#181818")
         case .highlighted:
-            self.textColor = Color.yellow
+            self.theme.textColor = DouBan.mainColor
         default:
-            self.textColor = Color.red
+            self.theme.textColor = Color(hex: "#818182")
         }
     }
 
@@ -60,14 +64,18 @@ struct DoubanNavBarItem: View, PagerTabViewDelegate {
 
 struct HomeBody2: View {
     var body: some View {
-        ZStack(alignment: .bottom, content: {
-            Image("avatar")
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                .foregroundColor(Color.white)
-                .padding(10)
-                .background(Color.red)
-                .cornerRadius(10)
-        })
+        ScrollView {
+            ForEach(0...4, id: \.self) { i in
+                ZStack(alignment: .bottom, content: {
+                    Image("avatar")
+                    Text("Hello, World! \(i)")
+                        .foregroundColor(Color.white)
+                        .padding(10)
+                        .background(Color.red)
+                        .cornerRadius(10)
+                }).frame(maxWidth: .infinity)
+            }
+        }
     }
 }
 
